@@ -1,0 +1,42 @@
+.parrafo{
+    border: 3px solid pink;
+    text-align: center;
+    margin: 30px;
+    padding: 45px;
+    color: palevioletred;
+    font-size: larger;
+    font-weight: 1500;
+}
+
+div{
+    border: 6px solid pink;
+    color: palegoldenrod;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span ul li{
+    color: blueviolet;
+    font-style: oblique;
+    font-weight: 2100;
+}
+
+#boton{
+    background-color: violet;
+    border: none;
+    font-size: 90px;
+    width: 150px;
+    padding: 6px;
+    color: plum;
+}
+
+.texto{
+    color: wheat;
+}
+
+.link{
+    color: paleturquoise;
+}
+
+.a:hover{
+    color: rgb(182, 138, 240);
+}
