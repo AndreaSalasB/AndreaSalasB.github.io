@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final parcial #3</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/"></script>
+    <link rel="stylesheet" href="CSSbodrio.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="hola">SELECT * FROM alumno</h3>
+                <p id="p1">Consulta #1 - Obtener el listado de todos los alumnos</p>
+                <img src="consulta1.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="queso">SELECT curso.nombreDescriptivo,asignatura.nombre FROM curso INNER JOIN asignatura ON curso.idCurso = asignatura.curso;</h3>
+                <p id="p1">Consulta #2 - Obtener el listado de cursos y las asignaturas que tiene</p>
+                <img src="consulta2.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT nombre, apellido1, apellido2, beca FROM alumno WHERE beca = "si"</h3>
+                <p id="p1">Consulta #3 - OBTENER EL LISTADO (NOMBRE Y APELLIDO) DE ALUMNOS QUE TENGAN BECA</p>
+                <img src="consulta3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT p.nombre, p.apellido1, p.apellido2, tc.telefono FROM profesor p JOIN tlfcontactoprof tc ON p.idProfesor = tc.idProfesor</h3>
+                <p id="p1">Consulta #4 - OBTENER LISTADO DE PROFESORES Y SU NUMERO DE CONTACTO</p>
+                <img src="consulta4.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT alumno.* FROM alumno INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.nombre = "Programacion"</h3>
+                <p id="p1">Consulta #5 - OBTENER EL LISTADO DE ALUMNOS (TODOS LOS CAMPOS) QUE ESTÉN INSCRITOS A LA ASIGNATURA DE PROGRAMACIÓN</p>
+                <img src="consulta5.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT profesor.*, asignatura.* FROM profesor INNER JOIN asignatura ON profesor.idProfesor = asignatura.coordinador ORDER BY profesor.nombre, asignatura.nombre</h3>
+                <p id="p1">Consulta #6 - OBTENER EL LISTADO DE PROFESORES Y ASIGNATURAS QUE IMPARTEN</p>
+                <img src="consulta6.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT asignatura.nombre AS nombre_asignatura, COUNT(matricula.idAlumno) AS total_alumnos_inscritos FROM asignatura INNER JOIN matricula ON asignatura.idAsignatura = matricula.idAsignatura GROUP BY asignatura.idAsignatura ORDER BY total_alumnos_inscritos DESC</h3>
+                <p id="p1">Consulta #7 - MOSTRAR LA ASIGNATURA QUE TIENE MÁS ALUMNOS INSCRITOS Y SU TOTAL</p>
+                <img src="consulta7.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT alumno.* FROM alumno INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura WHERE asignatura.coordinador = 'PR016'</h3>
+                <p id="p1">Consulta #8 - OBTENER EL LISTADO DE ALUMNOS QUE LES DA CLASE EL PROFESOR CON ID PR048 (JOSÉ MANUEL), SIN IMPORTAR EN QUÉ ASIGNATURA ESTÉ INSCRITO </p>
+                <img src="consulta8.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">SELECT
+                    c.idCurso,
+                    c.nombreDescriptivo AS nombre_curso,
+                    a.idAsignatura,
+                    a.nombre AS nombre_asignatura,
+                    p.idProfesor,
+                    p.nombre AS nombre_profesor,
+                    p.apellido1 AS apellido1_profesor,
+                    p.apellido2 AS apellido2_profesor
+                    FROM
+                    curso c
+                    JOIN
+                    asignatura a ON c.idCurso = a.curso
+                    JOIN
+                    impartir i ON a.idAsignatura = i.idAsignatura
+                    JOIN
+                    profesor p ON i.idProfesor = p.idProfesor
+                    ORDER BY
+                    c.idCurso, a.idAsignatura, p.idProfesor;</h3>
+                <p id="p1">Consulta #9 - OBTENER EL LISTADO DE CURSOS, CON ASIGNATURA, Y EL MAESTRO QUE LAS IMPARTE</p>
+                <img src="consulta9.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3 class="card" id="patata">>SELECT
+                    al.idAlumno,
+                    al.nombre AS nombre_alumno,
+                    al.apellido1 AS apellido1_alumno,
+                    al.apellido2 AS apellido2_alumno,
+                    a.idAsignatura,
+                    a.nombre AS nombre_asignatura,
+                    p.idProfesor,
+                    p.nombre AS nombre_profesor,
+                    p.apellido1 AS apellido1_profesor,
+                    p.apellido2 AS apellido2_profesor,
+                    c.idCurso,
+                    c.nombreDescriptivo AS nombre_curso
+                    FROM
+                    alumno al
+                    JOIN
+                    matricula m ON al.idAlumno = m.idAlumno
+                    JOIN
+                    asignatura a ON m.idAsignatura = a.idAsignatura
+                    JOIN
+                    impartir i ON a.idAsignatura = i.idAsignatura
+                    JOIN
+                    profesor p ON i.idProfesor = p.idProfesor
+                    JOIN
+                    curso c ON a.curso = c.idCurso
+                    ORDER BY
+                    al.idAlumno, a.idAsignatura</h3>
+                <p id="p1">Consulta #10 - OBTENER EL LISTADO DE ALUMNOS CON ASIGNATURAS QUE </p>
+                <img src="consulta10.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <footer>Andrea Salas Beltrán 4AVP</footer>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
