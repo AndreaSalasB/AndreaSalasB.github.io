@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en línea</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <form action="practica4.php" method="POST">
+            <div class="row" style="background-color: pink">
+                <h1 style="color: white;">¿Qué tanto sabes de Sanrio?</h1><hr>
+                    
+                
+                
+                <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                         1. ¿Qué animal es Cinnamoroll? 
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta1" value="Un conejo" required>  Un conejo </p>
+                            <p><input type="radio" name="pregunta1" value="Un perro" required>  Un perro </p>
+                            <p><input type="radio" name="pregunta1" value="Un gato" required >  Un gato </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                         2. ¿Cuál de estos personajes NO es un perro? 
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta2" value="Pompompurin" required>  Pompompurin </p>
+                            <p><input type="radio" name="pregunta2" value="Cinnamoroll" required> Cinnamoroll </p>
+                            <p><input type="radio" name="pregunta2" value="Badtz Maru" required >  Badtz Maru </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        3. ¿Quiénes son parte de la pandilla de Cinnamoroll? (Selecciona 2)
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="checkbox" name="pregunta3[]" value="Espresso"> Espresso </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="Badtz Maru"> Badtz Maru </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="Mocha"> Mocha </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        4. ¿Qué figura lleva Kuromi en su gorro?
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta4" value="Un corazón" required> Un corazón </p>
+                            <p><input type="radio" name="pregunta4" value="Una calavera" required> Una calavera </p>
+                            <p><input type="radio" name="pregunta4" value="Un gato" required > Un gato </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        5. ¿De qué color es el gorro de Pompompurin?
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta5" value="Café" required> Café </p>
+                            <p><input type="radio" name="pregunta5" value="Negro" required> Negro </p>
+                            <p><input type="radio" name="pregunta5" value="Amarillo" required > Amarillo </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        6. ¿Quién es el mejor amigo de My Melody?
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta6" value="My Sweet Piano" required> My Sweet Piano </p>
+                            <p><input type="radio" name="pregunta6" value="Kuromi" required> Kuromi </p>
+                            <p><input type="radio" name="pregunta6" value="Pompompurin" required > Pompompurin </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4" style="background-color: lightpink;">
+                        <p>
+                            7. “¡Hello, this is <input type="text" name="pregunta7" value="" required> !”
+
+                        </p>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        8. ¿Qué suele llevar My Melody en la cabeza? (Selecciona 2)
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="checkbox" name="pregunta8[]" value="Un moño"> Un moño </p>
+                            <p><input type="checkbox" name="pregunta8[]" value="Una flor"> Una flor </p>
+                            <p><input type="checkbox" name="pregunta8[]" value="Una mariposa" > Una mariposa </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        9. ¿Qué fruta es la favorita de Hello Kitty?
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta9" value="Manzana" required> Manzana </p>
+                            <p><input type="radio" name="pregunta9" value="Fresa" required> Fresa </p>
+                            <p><input type="radio" name="pregunta9" value="Cereza" required> Cereza </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: lightpink;">
+                        10. Badtz Maru es...?
+                        </div>
+                        <div class="card-body" style="background-color: hotpink;">
+                            <p><input type="radio" name="pregunta10" value="Un pinguino" required> Un pinguino </p>
+                            <p><input type="radio" name="pregunta10" value="Un perro" required> Un perro </p>
+                            <p><input type="radio" name="pregunta10" value="Un gato" required> Un gato </p>
+                        </div>
+                    </div>
+            </div>
+            <br><input type="submit" class="btn btn-primary" value="Terminar examen" style="background-color: palevioletred;">
+        </form>
+    </div>
+</body>
+</html>
